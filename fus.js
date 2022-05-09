@@ -1,23 +1,23 @@
-function fusion (tab1, tab2) {
+function fusion (tableau1, tableau2) {
     let resultArray = [];
-    let tab1Index = 0;
-    let tab2Index = 0;
+    let tableau1Index = 0;
+    let tableau2Index = 0;
   
     
-    while (tab1Index < tab1.length && tab2Index < tab2.length) {
-      if (tab1[tab1Index] < tab2[tab2Index]) {
-        resultArray.push(tab1[tab1Index]);
-        tab1Index++; 
+    while (tableau1Index < tableau1.length && tableau2Index < tableau2.length) {
+      if (tableau1[tableau1Index] < tableau2[tableau2Index]) {
+        resultArray.push(tableau1[tableau1Index]);
+        tableau1Index++; 
       } else {
-        resultArray.push(tab2[tab2Index]);
-        
+        resultArray.push(tableau2[tableau2Index]);
+        tableau2Index++;
       }
     }
   
     
     return resultArray
-            .concat(tab1.slice(tab1Index))
-            .concat(tab2.slice(tab2Index));
+            .concat(tableau1.slice(tableau1Index))
+            .concat(tableau2.slice(tableau2Index));
   }
-  let tab = [ 5, 4 , 3 , 1]
+  let tableau = [ 5, 4 , 3 , 1]
 console.log(fusion(tab));
